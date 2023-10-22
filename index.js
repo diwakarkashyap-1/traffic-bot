@@ -1,8 +1,28 @@
+const puppeteer = require("puppeteer");
 
+(async () => {
+    const browser = await puppeteer.launch({ headless: false });
+    const mul = async () => {
+        const page = await browser.newPage();
+        await page.goto("https://www.youtube.com/watch?v=1lYB9slJSH0");
 
-    
+        //   const setting = await page.$(".ytp-button.ytp-settings-button")
+
+        //   await setting.click().then(async ()=>{const quality = await page.$(".ytp-menuitem")
+
+        //   quality.click()
+
+        // })
+    };
+    for (let i = 0; i < 30; i++) {
+        await mul();
+
+        //    browser.newPage()
+        //   await page.goto("https://www.youtube.com/watch?v=MN0ToFqSp3Q");
+    }
+
     // const puppeteer = require("puppeteer");
-    
+
     // (async () =>{
     //     const browser = await puppeteer.launch({headless:  false , defaultViewport: false  });
     //     const page = await browser.newPage() ;
@@ -10,26 +30,20 @@
 
     //     const parentElement = await page.$$(".a-fixed-left-grid-inner")
 
-        // for(const childElement of parentElement){
-        //   const title = await page.evaluate(el => el.querySelector("div.a-section.octopus-dlp-asin-info-section > div.a-section.octopus-dlp-asin-title > a"), childElement)
-        //   console.log(childElement)
-        //   // div.a-section.octopus-dlp-asin-info-section > div.a-section.octopus-dlp-asin-title > a
-        // }
+    // for(const childElement of parentElement){
+    //   const title = await page.evaluate(el => el.querySelector("div.a-section.octopus-dlp-asin-info-section > div.a-section.octopus-dlp-asin-title > a"), childElement)
+    //   console.log(childElement)
+    //   // div.a-section.octopus-dlp-asin-info-section > div.a-section.octopus-dlp-asin-title > a
+    // }
 
-        // console.log(parentElement)
-        
-        // await browser.close()
-    
+    // console.log(parentElement)
+
+    // await browser.close()
+
     // })()
 
-
-
-
-
-
-    
     // const puppeteer = require("puppeteer");
-    
+
     // (async () =>{
     //     const browser = await puppeteer.launch({headless:  false , defaultViewport: false  });
     //     const page = await browser.newPage() ;
@@ -47,47 +61,11 @@
     //     }
     //     // console.log(parentElement)
     //     // await browser.close()
-    
+
     // })()
 
-
-
-
-    const puppeteer = require("puppeteer");
-
-    
-(async () => {
-  
-  const browser = await puppeteer.launch({headless: false })
-  const mul = async () => {
-    const page = await browser.newPage();
-    await page.goto("https://www.youtube.com/watch?v=1lYB9slJSH0");
-
-          //   const setting = await page.$(".ytp-button.ytp-settings-button")
-
-          //   await setting.click().then(async ()=>{const quality = await page.$(".ytp-menuitem")
-          
-          //   quality.click()
-          
-          // })
-
-
-
-  }
-  for (let i = 0; i < 30; i++) {
-    await mul()
-       
-
-  //    browser.newPage()
-  //   await page.goto("https://www.youtube.com/watch?v=MN0ToFqSp3Q");
-  }
-
-  // const closeFun = async() =>{
-  //   await browser.close()
-  // } 
-  // await setTimeout(closeFun, 14000);
-
-})()
-
-
-
+    // const closeFun = async() =>{
+    //   await browser.close()
+    // }
+    // await setTimeout(closeFun, 14000);
+})();
